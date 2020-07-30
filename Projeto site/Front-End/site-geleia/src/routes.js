@@ -1,10 +1,9 @@
-import React  from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Inicio from "./pages/Inicio";
 import Loja from "./pages/Loja";
 import Produtos from "./pages/Produtos";
-
 class Router extends Component {
   render() {
     return (
