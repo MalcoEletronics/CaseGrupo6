@@ -22,7 +22,7 @@ import axios from "axios";
 class Login extends React.Component {
   state = {
     loginName: null,
-    loginInserido: "mojombo",
+    loginInserido: "mojombo", //Simulando que o usuário insira o login mojombo//
     senha: null,
     token: null,
     loading: true,
