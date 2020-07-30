@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
-export default class Produtos extends Component {
-    render(){
-        return (
-            <body>
-            </body>
+class Produtos extends Component {
+    render() {
+        return( 
+            <div className="pagina">   
+                olá estamos em Produtos
+            </div>     
         );
     }
 }
+
+export default Produtos;

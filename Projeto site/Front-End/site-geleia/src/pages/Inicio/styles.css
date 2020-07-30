@@ -1,0 +1,337 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.rede {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(250, 250, 250);
+}
+
+.App-header {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(219, 219, 219) white rgb(219, 219, 219) white;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 54px;
+  width: 100%;
+  margin-top: initial;
+  margin-bottom: 30px;
+  position: fixed;
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icone {
+  height: 24px;
+  width: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.foto {
+  border-radius: 50%;
+  height: 24px;
+  cursor: pointer;
+}
+
+.botaoPesquisar {
+  background-color: rgb(250, 250, 250);
+  height: 28px;
+  width: 215px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px;
+  border-color: rgb(219, 219, 219);
+  border-radius: 3px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 935px;
+  margin-top: 85px;
+}
+
+.left {
+  width: 614px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  width: 293px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  margin-left: 650px;
+}
+
+.stories {
+  width: 614px;
+  height: 119px;
+  border: solid 1px;
+  border-color: rgb(219, 219, 219);
+  border-radius: 3px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.perfil {
+  width: 293px;
+  margin-top: 20px;
+}
+
+.amigo {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  margin: 0px 15px 0px 15px;
+  cursor: pointer;
+}
+
+.friend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.nome {
+  margin: 0px;
+  color: rgb(38, 38, 38);
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+p.texto {
+  margin: 0 0 0 10px;
+  color: rgb(38, 38, 38);
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.publicacao {
+  width: 614px;
+  height: 100%;
+  border: solid 1px;
+  border-color: rgb(219, 219, 219);
+  border-radius: 3px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.postador {
+  width: 32px;
+  border-radius: 50%;
+  margin: 10px 0 10px 10px;
+  cursor: pointer;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.identificacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mais {
+  margin: 15px;
+  cursor: pointer;
+}
+
+.imagemPost {
+  width: 614px;
+  height: 100%;
+  border: solid 1px;
+  border-color: rgb(219, 219, 219);
+  cursor: pointer;
+}
+
+.botaoInterativo {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.interacoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comentario{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 5px 10px 5px 10px;
+}
+
+p.textoComentario{
+  margin: 0;
+}
+
+p.textoTempo{
+  font-size: 10px;
+  color: #8e8e8e;
+}
+
+.tempo{
+  margin: 0 0 10px 10px;
+}
+
+.novoComentario{
+  width: 614px;
+  height: 56px;
+  border: solid 1px;
+  border-top: 0;
+  border-color: rgb(219, 219, 219);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(142,142,142);
+}
+
+p.addComent{
+  margin-left: 10px;
+}
+
+p.publicar{
+  color: rgb(178,223,252);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.perfil{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fotoPerfil{
+  width: 56px;
+  border-radius: 50%;
+}
+
+.dadosDono{
+  display: flex;
+  flex-direction: column;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+p.descricaoDono{
+  color: #8e8e8e;
+  margin: 0;
+  font-size: 12px;
+}
+
+.sugestoesTitulo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+p.sugestoesParaVoce{
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+p.verTudo{
+  color: #262626;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+
+.sugestao{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fotoSugestao{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.identidade{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.linhaSugestao{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p.nomeSugestao{
+  font-size: 14px;
+  color: #262626;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+
+p.seguir{
+  color: rgb(0,149,246);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fotoNome{
+  display: flex;
+  flex-direction: row;
+}
+
+p.final{
+  font-size: 11px;
+  color: #c7c7c7;
+  margin-top: 25px;
+  margin-bottom: 0;
+  cursor: pointer;
+}

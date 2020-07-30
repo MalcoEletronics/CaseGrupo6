@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+// import Sugestao from './components/Sugestao.js';
+import './styles.css';
 
 export default class Inicio extends Component {
-    render(){
-        return (
-            <body>
-                <image className="ImagemPrincipal" src={require("./../../assets/images/ImagemPrincipal.png")}>
-
-                </image>
-            </body>
-        );
-    }
+  render() {
+    return (
+      <div className="rede">
+        Olá! Estamos no inicio
+      </div>
+    );
+  }
 }
