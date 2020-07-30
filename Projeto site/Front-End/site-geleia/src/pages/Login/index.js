@@ -1,36 +1,18 @@
-// import React, { Component } from 'react';
-// import axios from "axios";
-// import './styles.css';
-
-// export default class Login extends Component {
-//     render(){
-
-//         const usuarios = axios.get("http://api.github.com/users");
-
-//         return (
-//             <body>
-//                 olá estamos no Login {usuarios.data[0].login}
-//             </body>
-
-//         );
-//     }
-// }
-
 import React from "react";
 import axios from "axios";
 
 class Login extends React.Component {
   state = {
-    loginName: null,
+    loginName: null,          //login capturado da base de dados do backEnd
     loginInserido: "mojombo", //Simulando que o usuário insira o login mojombo//
-    senha: null,
-    token: null,
-    loading: true,
-    validado: false,
+    senha: null,              //senha do usuário armezenada no back
+    token: null,              //token de verificação após validação
+    loading: true,        
+    validado: false,          //validação se o usuário e senha batem com o do banco de dados
     error: false,
   };
 
-  pegarDados = async () => {
+  pegarDados = async () => {            //captura os dados do backend
     this.setState({ loading: true });
     try {
       const resposta = await axios.get("http://api.github.com/users");
@@ -43,7 +25,7 @@ class Login extends React.Component {
     }
   };
 
-  validarDados = async () => {
+  validarDados = async () => {          //faz a validação comparando o login inserido com o da base de dados
     (
       (this.state.loginName === this.state.loginInserido) ?
       this.setState({validado:true}) :
@@ -56,16 +38,6 @@ class Login extends React.Component {
   }
 
   render() {
-    // const pegarDados = async () => {
-    //   try {
-    //     const resposta = axios.get("http://api.github.com/users");
-    //     this.setState({ loginName: resposta.data[0].login });
-    //     alert("fim");
-    //   } catch (error) {
-    //     alert("algum erro ocorreu");
-    //   }
-    // };
-
     return (
       <div>
         <h1>{this.state.error ? this.state.error : this.state.loginName}</h1>
