@@ -1,16 +1,20 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+import './styles.css';
 
 class Login extends React.Component {
   constructor(){
     super();
     this.state = {
-      loginName: null,          //login capturado da base de dados do backEnd
-      loginInserido: "mojombo", //Simulando que o usuário insira o login mojombo//
-      senha: null,              //senha do usuário armezenada no back
-      token: null,              //token de verificação após validação
-      loading: true,        
-      validado: false,          //validação se o usuário e senha batem com o do banco de dados
+      loginName: "malco",          //login capturado da base de dados do backEnd
+      loginInserido: null,        //Simulando que o usuário insira o login mojombo//
+      senha: "123",               //senha do usuário armezenada no back
+      senhaInserida: null,        //senha inserida pelo usuário
+      token: null,                //token de verificação após validação
+      loading: true,            
+      validado: false,            //validação se o usuário e senha batem com o do banco de dados
       error: false,
   }
   
@@ -32,6 +36,19 @@ class Login extends React.Component {
     }
   };
 
+  takeLogin = (e) => {
+    this.setState({ loginInserido: e.target.value });
+  };
+
+  takePass = (f) => {
+    this.setState({ senhaInserida: f.target.value });
+  };
+
+  verifyData = () => {
+    (this.state.loginInserido === this.state.loginName) ?
+    this.setState({validado:true}) : this.setState({validado:false})
+  };
+
   // mudarNome (){
   //   this.setState({loginInserido:"Malco"});
   // };
@@ -43,12 +60,26 @@ class Login extends React.Component {
   render() {
     const { loginName, loginInserido, senha, token, loading, validado, error} = this.state;
     return (
+      // <div>
+      //   <h1>{this.state.error ? this.state.error : this.state.loginName}</h1>
+      //   <h1>{this.state.loading ? "Carregando" : null}</h1>
+      //   <h1>{this.state.validado ? "sim" : "não"}</h1>                        
+      // </div>   
       <div>
-        <h1>{this.state.error ? this.state.error : this.state.loginName}</h1>
-        <h1>{this.state.loading ? "Carregando" : null}</h1>
-        <h1>{this.state.validado ? "sim" : "não"}</h1>
-      </div>
+        <div className="caixaLogin">
+          <h1>Login</h1>
+          <h2>Digite seu Login:</h2>
+          <input type="text" onChange={this.takeLogin}/>
 
+          <h2>Digite sua senha:</h2>
+          <input type="password" onChange={this.takePass}/>
+
+          <button className="botaoLogar" onClick={this.verifyData}>Login</button>
+
+          <h2>{this.state.validado?"sim":"não"}</h2>
+
+        </div>        
+      </div>
     );
   }
 }
