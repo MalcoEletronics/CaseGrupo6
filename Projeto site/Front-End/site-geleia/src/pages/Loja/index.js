@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import sellProduct from './../../components/sellProduct/index.js'
+import sellProducts from './../../components/sellProduct/index'
  
 import './styles.css';
-export default class Loja extends Component {
+class Loja extends Component {
     render(){
-        return (
-            <body>
-                <h3>olá estamos na loja</h3>
-                <sellProduct/>                      
-
-            </body>
+        return (   
+                <div>
+                    <h3>olá estamos na loja</h3> 
+                    <sellProducts/>   
+                </div>        
         );
     }
 }
+
+export default Loja;

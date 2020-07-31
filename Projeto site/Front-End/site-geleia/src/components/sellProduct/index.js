@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './styles.css';
 
-export default class sellProduct extends Component {
+class sellProducts extends Component {
     render() {
         return (
             <div className="productBox">
@@ -10,3 +10,5 @@ export default class sellProduct extends Component {
         );
     }
 }
+
+export default sellProducts;
