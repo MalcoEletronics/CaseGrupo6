@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 import './styles.css';
 
@@ -24,7 +24,7 @@ class Login extends React.Component {
     this.setState({ loading: true });
     try {
       const resposta = await axios.get("http://api.github.com/users");
-      this.setState({ loginName: resposta.data[0].login });
+      this.setState({ loginName: resposta.data[0].login });             //por hora, experimentalmente, ele só pega o login do usuário de posição 0 na API do github
       this.state.loginName === this.state.loginInserido ?
         this.setState({validado:true}):
         this.setState({validado:false})
@@ -44,9 +44,14 @@ class Login extends React.Component {
     this.setState({ senhaInserida: f.target.value });
   };
 
+  // goPage = (validation) => {
+  // };
+
+
   verifyData = () => {
     ((this.state.loginInserido === this.state.loginName) && (this.state.senhaInserida === this.state.senha)) ?
     this.setState({validado:true}) : this.setState({validado:false})
+    // if (this.state.validado) return <Redirect to={"/produtos"} />;
   };
 
   componentDidMount() {
