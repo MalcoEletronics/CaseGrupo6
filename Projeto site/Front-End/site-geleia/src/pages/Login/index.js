@@ -45,13 +45,9 @@ class Login extends React.Component {
   };
 
   verifyData = () => {
-    (this.state.loginInserido === this.state.loginName) ?
+    ((this.state.loginInserido === this.state.loginName) && (this.state.senhaInserida === this.state.senha)) ?
     this.setState({validado:true}) : this.setState({validado:false})
   };
-
-  // mudarNome (){
-  //   this.setState({loginInserido:"Malco"});
-  // };
 
   componentDidMount() {
     this.pegarDados();
@@ -60,11 +56,6 @@ class Login extends React.Component {
   render() {
     const { loginName, loginInserido, senha, token, loading, validado, error} = this.state;
     return (
-      // <div>
-      //   <h1>{this.state.error ? this.state.error : this.state.loginName}</h1>
-      //   <h1>{this.state.loading ? "Carregando" : null}</h1>
-      //   <h1>{this.state.validado ? "sim" : "não"}</h1>                        
-      // </div>   
       <div>
         <div className="caixaLogin">
           <h1>Login</h1>
