@@ -6,8 +6,8 @@ export default class Loja extends Component {
     render(){
         return (
             <body>
-                olá estamos na loja
-                <sellProduct/>
+                <h3>olá estamos na loja</h3>
+                <sellProduct/>                      
 
             </body>
         );
