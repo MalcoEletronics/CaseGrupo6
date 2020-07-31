@@ -10,10 +10,10 @@ class Router extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Produtos} />
-          <Route path="/loja" component={Loja} />
-          <Route path="/inicio" component={Inicio} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Produtos}  />
+          <Route path="/loja"   component={Loja}      />
+          <Route path="/inicio" component={Inicio}    />
+          <Route path="/login"  component={Login}     />
         </Switch>
       </BrowserRouter>
     );
